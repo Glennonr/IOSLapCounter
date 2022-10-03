@@ -21,13 +21,17 @@ struct StopWatchView: View {
                 HStack{
                 StopWatchButton(actions: [self.stopWatch.reset, self.stopWatch.pass],
                                 labels: ["Reset", "Reset"],
-                                color: Color.red,
+                                color1: Color.red,
+                                color2: Color.clear,
                                 isPaused: self.stopWatch.isPaused())
+                    .cornerRadius(10)
                     
                 StopWatchButton(actions: [self.stopWatch.start, self.stopWatch.pause],
                                 labels: ["Start", "Pause"],
-                                color: Color.blue,
+                                color1: Color.blue,
+                                color2: Color.red,
                                 isPaused: self.stopWatch.isPaused())
+                    .cornerRadius(10)
                 }
             }
     }
@@ -36,7 +40,8 @@ struct StopWatchView: View {
     struct StopWatchButton : View {
         var actions: [() -> Void]
         var labels: [String]
-        var color: Color
+        var color1: Color
+        var color2: Color
         var isPaused: Bool
         
         var body: some View {
@@ -62,13 +67,14 @@ struct StopWatchView: View {
                                height: 50)
                 }
             }
-            .background(self.color)
+            .background(self.isPaused ? color1 : color2)
         }
     }
 
 struct StopWatchView_Previews: PreviewProvider {
     static var previews: some View {
         StopWatchView(stopWatch: StopWatch())
+            .previewLayout(.fixed(width:400, height:100))
     }
 }
 }

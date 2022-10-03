@@ -40,6 +40,7 @@ struct RunnersView: View {
                             }
                     }
                 }
+                .interactiveDismissDisabled()
                 .frame(alignment: .trailing)
                 ForEach($runners){ runner in
                     RowView(runner: runner, stopWatchTime: $stopWatch.stopWatchTime)

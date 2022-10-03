@@ -12,7 +12,6 @@
 		1348569F2863F591007A0EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1348569E2863F591007A0EE3 /* Assets.xcassets */; };
 		134856A22863F591007A0EE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134856A12863F591007A0EE3 /* Preview Assets.xcassets */; };
 		134856A92863F5E8007A0EE3 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134856A82863F5E8007A0EE3 /* Runner.swift */; };
-		134856AB2863F6DE007A0EE3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134856AA2863F6DE007A0EE3 /* CardView.swift */; };
 		134856AD286400B0007A0EE3 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134856AC286400B0007A0EE3 /* StopWatch.swift */; };
 		13B6CA5628EB62B50042C0B0 /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6CA5528EB62B50042C0B0 /* StopWatchView.swift */; };
 		13B6CA5A28EB66540042C0B0 /* RunnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6CA5928EB66540042C0B0 /* RunnersView.swift */; };
@@ -27,7 +26,6 @@
 		1348569E2863F591007A0EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		134856A12863F591007A0EE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		134856A82863F5E8007A0EE3 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
-		134856AA2863F6DE007A0EE3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		134856AC286400B0007A0EE3 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		13B6CA5528EB62B50042C0B0 /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		13B6CA5928EB66540042C0B0 /* RunnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnersView.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		13B6CA5728EB62BF0042C0B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				134856AA2863F6DE007A0EE3 /* CardView.swift */,
 				1348569C2863F58C007A0EE3 /* ContentView.swift */,
 				13B6CA5528EB62B50042C0B0 /* StopWatchView.swift */,
 				13B6CA5928EB66540042C0B0 /* RunnersView.swift */,
@@ -180,7 +177,6 @@
 				13B6CA5C28EB69CB0042C0B0 /* DetailEditView.swift in Sources */,
 				13B6CA5E28EB6B5A0042C0B0 /* RowView.swift in Sources */,
 				134856AD286400B0007A0EE3 /* StopWatch.swift in Sources */,
-				134856AB2863F6DE007A0EE3 /* CardView.swift in Sources */,
 				13B6CA5A28EB66540042C0B0 /* RunnersView.swift in Sources */,
 				1348569B2863F58C007A0EE3 /* LapCounterApp.swift in Sources */,
 			);

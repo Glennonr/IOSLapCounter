@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct DetailEditView: View {
     @Binding var data: Runner.Data
@@ -17,6 +18,12 @@ struct DetailEditView: View {
                 TextField("Team", text: $data.team)
                 TextField("Laps", text: $data.lapsToGo)
                     .keyboardType(.decimalPad)
+                    .onReceive(Just(data.lapsToGo)) { newValue in
+                        let filtered = newValue.filter { "0123456789.".contains($0) }
+                        if filtered != newValue {
+                            data.lapsToGo = filtered
+                        }
+                    }
             }
         }
     }

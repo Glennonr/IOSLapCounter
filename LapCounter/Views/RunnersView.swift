@@ -43,7 +43,7 @@ struct RunnersView: View {
                 .interactiveDismissDisabled()
                 .frame(alignment: .trailing)
                 ForEach($runners){ runner in
-                    RowView(runner: runner, stopWatchTime: $stopWatch.stopWatchTime)
+                    RowView(runner: runner, stopWatch: stopWatch)
                 }
                 .onDelete { indices in
                     runners.remove(atOffsets: indices)

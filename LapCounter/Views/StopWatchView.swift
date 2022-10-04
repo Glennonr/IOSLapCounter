@@ -23,11 +23,12 @@ struct StopWatchView: View {
                                 labels: ["Reset", "Reset"],
                                 color1: Color.red,
                                 color2: Color.clear,
+                                foregroundColor2: Color.clear,
                                 isPaused: self.stopWatch.isPaused())
                     .cornerRadius(10)
                     
                 StopWatchButton(actions: [self.stopWatch.start, self.stopWatch.pause],
-                                labels: ["Start", "Pause"],
+                                labels: ["Start", "Stop"],
                                 color1: Color.blue,
                                 color2: Color.red,
                                 isPaused: self.stopWatch.isPaused())
@@ -42,6 +43,8 @@ struct StopWatchView: View {
         var labels: [String]
         var color1: Color
         var color2: Color
+        var foregroundColor: Color = Color.white
+        var foregroundColor2: Color = Color.white
         var isPaused: Bool
         
         var body: some View {
@@ -57,12 +60,12 @@ struct StopWatchView: View {
             {
                 if isPaused {
                     Text(self.labels[0])
-                        .foregroundColor(Color.white)
+                        .foregroundColor(foregroundColor)
                         .frame(width: buttonWidth,
                                height: 50)
                 } else {
                     Text(self.labels[1])
-                        .foregroundColor(Color.white)
+                        .foregroundColor(foregroundColor2)
                         .frame(width: buttonWidth,
                                height: 50)
                 }

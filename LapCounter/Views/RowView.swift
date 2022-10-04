@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RowView: View {
     @Binding var runner: Runner
-    @Binding var stopWatchTime: String
+    @StateObject var stopWatch: StopWatch
     var body: some View {
         HStack{
             VStack{
@@ -31,10 +31,7 @@ struct RowView: View {
             Spacer()
             
             Button("Lap", action:{
-                if let lapsToGo = Double(runner.lapsToGo), lapsToGo > 0 {
-                    runner.lastSplit = stopWatchTime
-                }
-                runner.lap()
+                runner.lap(currentTime: stopWatch.stopWatchTime)
             })
             .padding(.horizontal)
         }
@@ -44,7 +41,7 @@ struct RowView: View {
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView(runner: .constant(Runner.sampleData[0]), stopWatchTime: .constant("00:00:00"))
+        RowView(runner: .constant(Runner.sampleData[0]), stopWatch: StopWatch())
             .previewLayout(.fixed(width:400, height:40))
     }
 }

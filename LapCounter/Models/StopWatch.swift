@@ -71,18 +71,12 @@ class StopWatch: ObservableObject {
         self.currentLaps = [LapItem]()
     }
     
-    func update() {
-        objectWillChange.send()
-    }
+    func update() { objectWillChange.send() }
     
-    func isPaused() -> Bool {
-        return self.paused
-    }
+    func isPaused() -> Bool { return self.paused }
     
     private func startTimer() {
-        self.sourceTimer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags.strict,
-                                                          queue: self.queue)
-        
+        self.sourceTimer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags.strict, queue: self.queue)
         self.resumeTimer()
     }
     
@@ -90,7 +84,6 @@ class StopWatch: ObservableObject {
         self.sourceTimer?.setEventHandler {
             self.updateTimer()
         }
-        
         self.sourceTimer?.schedule(deadline: .now(),
                                    repeating: 0.01)
         self.sourceTimer?.resume()
@@ -98,7 +91,6 @@ class StopWatch: ObservableObject {
     
     private func updateTimer() {
         self.counter += 1
-        
         DispatchQueue.main.async {
             self.stopWatchTime = StopWatch.convertCountToTimeString(counter: self.counter)
         }

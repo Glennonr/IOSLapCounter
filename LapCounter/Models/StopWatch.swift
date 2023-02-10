@@ -118,8 +118,9 @@ extension StopWatch {
 extension StopWatch {
     static func convertCountToTimeString(counter: Int) -> String {
         let millseconds = counter % 100
-        let seconds = counter / 100
-        let minutes = seconds / 60
+        let seconds = (counter / 100) % 60
+        let minutes = ((counter / (100*60)) % 60)
+
         
         var millsecondsString = "\(millseconds)"
         var secondsString = "\(seconds)"

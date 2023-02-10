@@ -15,11 +15,11 @@ struct ContentView: View {
         VStack{
             StopWatchView(stopWatch: stopwatch)
             RunnersView(runners: $runners, stopWatch: stopwatch)
-            Button("Get Results Report"){
-                isPresentingReportView = true
+            Button("Print Results"){
                 stopwatch.pause()
             }
             .padding(.bottom, 10)
+            .disabled(!stopwatch.isPaused() || (runners.count < 1))
             .sheet(isPresented: $isPresentingReportView) {
                 NavigationView {
                     ReportView(runners: $runners)
@@ -34,7 +34,6 @@ struct ContentView: View {
                 }
             }
         }
-        
     }
 }
 

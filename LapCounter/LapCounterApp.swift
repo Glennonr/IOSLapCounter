@@ -15,7 +15,7 @@ struct LapCounterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(runners: $runners)
+            HomePageView(runners: $runners)
         }
     }
 }

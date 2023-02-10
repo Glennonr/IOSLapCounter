@@ -18,6 +18,8 @@
 		13B6CA5A28EB66540042C0B0 /* RunnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6CA5928EB66540042C0B0 /* RunnersView.swift */; };
 		13B6CA5C28EB69CB0042C0B0 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6CA5B28EB69CB0042C0B0 /* DetailEditView.swift */; };
 		13B6CA5E28EB6B5A0042C0B0 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6CA5D28EB6B5A0042C0B0 /* RowView.swift */; };
+		13D2F8AD2996D43400A23D2E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D2F8AC2996D43400A23D2E /* HomePageView.swift */; };
+		13D2F8B12996D93300A23D2E /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D2F8B02996D93300A23D2E /* CreditView.swift */; };
 		13F45CA428EB85550086093D /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F45CA328EB85550086093D /* ReportView.swift */; };
 		13F45CA628EB892C0086093D /* ReportRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F45CA528EB892C0086093D /* ReportRowView.swift */; };
 		13F45CA828EB8A5C0086093D /* Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F45CA728EB8A5C0086093D /* Split.swift */; };
@@ -36,6 +38,8 @@
 		13B6CA5928EB66540042C0B0 /* RunnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnersView.swift; sourceTree = "<group>"; };
 		13B6CA5B28EB69CB0042C0B0 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		13B6CA5D28EB6B5A0042C0B0 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		13D2F8AC2996D43400A23D2E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		13D2F8B02996D93300A23D2E /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		13F45CA328EB85550086093D /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		13F45CA528EB892C0086093D /* ReportRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRowView.swift; sourceTree = "<group>"; };
 		13F45CA728EB8A5C0086093D /* Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Split.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				13F45CA328EB85550086093D /* ReportView.swift */,
 				13F45CA528EB892C0086093D /* ReportRowView.swift */,
 				13B3666A28ECED3700A82CD4 /* LaunchScreen.storyboard */,
+				13D2F8AC2996D43400A23D2E /* HomePageView.swift */,
+				13D2F8B02996D93300A23D2E /* CreditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,12 +194,14 @@
 				134856A92863F5E8007A0EE3 /* Runner.swift in Sources */,
 				1348569D2863F58C007A0EE3 /* ContentView.swift in Sources */,
 				13B6CA5C28EB69CB0042C0B0 /* DetailEditView.swift in Sources */,
+				13D2F8B12996D93300A23D2E /* CreditView.swift in Sources */,
 				13B6CA5E28EB6B5A0042C0B0 /* RowView.swift in Sources */,
 				13F45CA428EB85550086093D /* ReportView.swift in Sources */,
 				134856AD286400B0007A0EE3 /* StopWatch.swift in Sources */,
 				13F45CA828EB8A5C0086093D /* Split.swift in Sources */,
 				13F45CA628EB892C0086093D /* ReportRowView.swift in Sources */,
 				13B6CA5A28EB66540042C0B0 /* RunnersView.swift in Sources */,
+				13D2F8AD2996D43400A23D2E /* HomePageView.swift in Sources */,
 				1348569B2863F58C007A0EE3 /* LapCounterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,8 +339,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,8 +370,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

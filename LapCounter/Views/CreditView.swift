@@ -18,32 +18,14 @@ struct CreditView: View {
                 .bold()
                 .padding(.bottom, 30)
             Text("Originally an Android App created by")
-            GeometryReader { geo in
                 HStack(alignment: .center){
-                    VStack(alignment: .center){
-                        Text("Dom DeRafelo")
                         Image("Dom Roster")
-                            .resizable()
-                            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.4)
-                    }
-                    VStack(alignment: .center){
-                        Text("Richie Glennon")
+                            .frame(width: 30)
                         Image("Richie Roster")
-                            .resizable()
-                            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.4)
-
-                    }
-                    VStack(alignment: .center){
-                        Text("Shane Houghton")
+                            .frame(width: 30)
                         Image("Shane Roster")
-                            .resizable()
-                            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.4)
-                    }
+                            .frame(width: 30)
                 }
-                .frame(width: geo.size.width)
-
-            }
-            
             
             Text("iOS implementation by Richie Glennon")
                 .padding(.top, -80)

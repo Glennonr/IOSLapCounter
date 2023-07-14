@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+extension UserDefaults {
+    var welcomeScreenShown: Bool {
+        get {
+            return (UserDefaults.standard.value(forKey: "welcomeScreenShown") as? Bool) ?? false
+        } set {
+            UserDefaults.standard.setValue(newValue, forKey: "welcomeScreenShown")
+        }
+    }
+}
+
 @main
 struct LapCounterApp: App {
-    
-    @State private var runners: [Runner] = []
-    @ObservedObject private var stopWatch: StopWatch = StopWatch()
-    
     var body: some Scene {
         WindowGroup {
-            HomePageView(runners: $runners)
+            HomePageView()
         }
     }
 }

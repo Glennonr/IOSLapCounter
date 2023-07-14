@@ -4,7 +4,7 @@ See LICENSE folder for this sample’s licensing information.
 
 import Foundation
 
-struct Runner: Identifiable {
+struct Runner: Identifiable, Comparable {
     let id: UUID
     var name: String
     var team: String
@@ -29,6 +29,18 @@ struct Runner: Identifiable {
         self.splits = splits
     }
     
+    static func convertTimeStringToTime(timeString: String) -> Double {
+        var numberTimeParts: [Double] = []
+        for part in timeString.split(separator: ":") {
+            numberTimeParts.append(Double(part)!)
+        }
+        return ((numberTimeParts[1] * 100) + (numberTimeParts[0] * 6000) + numberTimeParts[2])
+    }
+    
+    public static func < (lhs: Runner, rhs: Runner) -> Bool {
+        return convertTimeStringToTime(timeString: lhs.splits.last ?? "00:00:00") < convertTimeStringToTime(timeString: rhs.splits.last ?? "00:00:00")
+    }
+    
     mutating func lap(currentTime: String) {
         if var lapsDouble = Double(self.lapsToGo) {
             if lapsDouble > 0 {
@@ -39,7 +51,6 @@ struct Runner: Identifiable {
                     lapsDouble = lapsDouble - 0.5
                 }
                 splits.append(lastSplit)
-                print(splits)
                 self.lapsToGo = String(format: "%.0f", lapsDouble)
             }
         }

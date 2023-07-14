@@ -28,8 +28,8 @@
                                 </constraints>
                                 <imageReference key="image" image="figure.run.circle.fill" catalog="system" renderingMode="original"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lap Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJj-SM-4oU">
-                                <rect key="frame" x="79.333333333333329" y="513" width="231.33333333333337" height="41.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lap Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYO-f8-0ad">
+                                <rect key="frame" x="64" y="517" width="262" height="41"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,13 +38,11 @@
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kJj-SM-4oU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9nm-M8-zc4"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="MYO-f8-0ad" secondAttribute="trailing" constant="64" id="6jC-qe-hVC"/>
                             <constraint firstItem="Py5-qr-GrK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Cp6-Tl-lI9"/>
                             <constraint firstItem="Py5-qr-GrK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Czr-kA-HHX"/>
-                            <constraint firstItem="kJj-SM-4oU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KtT-Gc-Wz4"/>
-                            <constraint firstItem="kJj-SM-4oU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cOE-8K-SeS"/>
-                            <constraint firstItem="kJj-SM-4oU" firstAttribute="top" secondItem="Py5-qr-GrK" secondAttribute="bottom" constant="16" id="qut-hl-2zo"/>
-                            <constraint firstItem="kJj-SM-4oU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yAM-Ck-Lvo"/>
+                            <constraint firstItem="MYO-f8-0ad" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="64" id="JhO-UU-m7o"/>
+                            <constraint firstItem="MYO-f8-0ad" firstAttribute="top" secondItem="Py5-qr-GrK" secondAttribute="bottom" constant="20" id="lhk-rg-WTr"/>
                         </constraints>
                     </view>
                 </viewController>

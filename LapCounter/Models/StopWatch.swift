@@ -10,33 +10,11 @@ import Foundation
 import SwiftUI
 
 class StopWatch: ObservableObject {
+    @Published var stopWatchTime = "00:00:00"
+    @Published var paused = true
     private var sourceTimer: DispatchSourceTimer?
     private let queue = DispatchQueue(label: "stopwatch.timer")
     private var counter: Int = 0
-    
-    var stopWatchTime = "00:00:00" {
-        didSet {
-            self.update()
-        }
-    }
-    
-    var paused = true {
-        didSet {
-            self.update()
-        }
-    }
-    
-    var laps = [LapItem]() {
-        didSet {
-            self.update()
-        }
-    }
-    
-    private var currentLaps = [LapItem]() {
-        didSet {
-            self.laps = currentLaps.reversed()
-        }
-    }
     
     func start() {
         self.paused = !self.paused
@@ -56,22 +34,10 @@ class StopWatch: ObservableObject {
     
     func pass() {}
     
-    func lap() {
-        if let firstLap = self.laps.first {
-            let difference = self.counter - firstLap.count
-            self.currentLaps.append(LapItem(count: self.counter, diff: difference))
-        } else {
-            self.currentLaps.append(LapItem(count: self.counter))
-        }
-    }
-    
     func reset() {
         self.stopWatchTime = "00:00:00"
         self.counter = 0
-        self.currentLaps = [LapItem]()
     }
-    
-    func update() { objectWillChange.send() }
     
     func isPaused() -> Bool { return self.paused }
     
@@ -84,8 +50,7 @@ class StopWatch: ObservableObject {
         self.sourceTimer?.setEventHandler {
             self.updateTimer()
         }
-        self.sourceTimer?.schedule(deadline: .now(),
-                                   repeating: 0.01)
+        self.sourceTimer?.schedule(deadline: .now(), repeating: 0.01)
         self.sourceTimer?.resume()
     }
     
@@ -121,7 +86,6 @@ extension StopWatch {
         let seconds = (counter / 100) % 60
         let minutes = ((counter / (100*60)) % 60)
 
-        
         var millsecondsString = "\(millseconds)"
         var secondsString = "\(seconds)"
         var minutesString = "\(minutes)"
